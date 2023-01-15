@@ -1,61 +1,516 @@
-body, html {
-	width:100%;
+:root {
+	--darklight: #6B7280;
+	--indigo: #3730A3;
+	--gray: #1F2937;
+	--white: #ffffff;
+}
+
+body,
+html {
+	width: 100%;
 	height: 100%;
 	background-color: #ffffff;
 	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing:grayscale;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+body {
+	font-family: 'Inter', sans-serif;
+	font-weight: normal;
+	margin-top: 178px;
 }
 
 * {
-	margin:0;
-	padding:0;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 /** TYPOGRAPHY **/
 
 p {
-	color:;
-	font-size:;
-	line-height:;
-	font-weight:;
-	margin:;
-	padding:;
+	font-family: 'Inter', sans-serif;
+	color: var(--darklight);
+	font-size: 18px;
+	line-height: 28px;
+	font-weight: 400;
+	margin-bottom: 20px;
 }
 
 h1 {
-	color:;
-	font-size:;
-	line-height:;
-	font-weight:;
-	margin:;
-	padding:;
+	font-family: 'Inter', sans-serif;
+	color: var(--gray);
+	font-size: 72px;
+	line-height: 72px;
+	font-weight: 700;
+	margin-bottom: 20px;
 }
 
 h2 {
-	color:;
-	font-size:;
-	line-height:;
-	font-weight:;
-	margin:;
-	padding:;
+	font-family: 'Inter', sans-serif;
+	color: var(--gray);
+	font-size: 48px;
+	line-height: 48px;
+	font-weight: 600;
+	margin-bottom: 20px;
 }
 
 h3 {
-	color:;
-	font-size:;
-	line-height:;
-	font-weight:;
-	margin:;
-	padding:;
+	font-family: 'Inter', sans-serif;
+	color: var(--gray);
+	font-size: 30px;
+	line-height: 36px;
+	font-weight: 600;
+	margin-bottom: 20px;
 }
 
 h4 {
-	color:;
-	font-size:;
-	line-height:;
-	font-weight:;
-	margin:;
-	padding:;
+	font-family: 'Inter', sans-serif;
+	color: var(--gray);
+	font-size: 18px;
+	line-height: 23px;
+	font-weight: 600;
+	margin-bottom: 20px;
 }
 
 /*--- GENERAL ---*/
+
+.container {
+	max-width: 1206px;
+}
+
+/* main header css */
+
+.main-header {
+	width: 100%;
+	position: fixed;
+	padding: 50px 0;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	background-color: var(--white);
+}
+
+.main-header .logo {
+	width: 62px;
+	height: 62px;
+	border-radius: 50px;
+	background-color: #dbd6f8;
+	padding-left: 20px;
+	padding-top: 17px;
+	transition: .3s linear .2s;
+}
+
+.main-header .logo:hover {
+	transform: rotate(-30deg);
+}
+
+.main-header .navbar-nav {
+	margin-left: auto;
+}
+
+.main-header .navbar-nav .nav-item {
+	margin: 0 35px;
+}
+
+.main-header .navbar-nav .nav-link {
+	font-size: 18px;
+	color: var(--gray);
+	font-weight: 500;
+	transition: .1s linear .3s;
+}
+
+.main-header .navbar-nav .nav-link:hover {
+	color: var(--indigo);
+}
+
+.main-header .navbar-nav .btn {
+	color: var(--indigo);
+	font-size: 18px;
+	font-weight: 500;
+	transition: .3s linear .1s;
+	border-color: var(--indigo);
+	margin-left: 50px;
+	padding: 12px 32px;
+}
+
+.main-header .navbar-nav .btn:hover {
+	background-color: var(--indigo);
+	color: var(--white);
+}
+
+/* Main Banner CSS */
+
+.main-banner {
+	width: 100%;
+	margin-top: 245px;
+	margin-bottom: 200px;
+}
+
+.main-banner .main-banner-parent {
+	width: 100%;
+	display: flex;
+}
+
+.main-banner .main-banner-parent .caption hr {
+	display: inline-block;
+	width: 10%;
+	border: 1px solid var(--indigo);
+	margin-bottom: 7px;
+}
+
+.main-banner .main-banner-parent .caption .name-banner {
+	color: var(--indigo);
+	font-weight: 500;
+	font-size: 20px;
+}
+
+
+.main-banner .main-banner-parent figure {
+	width: 40%;
+}
+
+.main-banner .main-banner-parent figure img {
+	margin-left: auto;
+}
+
+.main-banner .main-banner-parent .caption {
+	justify-content: flex-start;
+	margin-right: 80px;
+}
+
+.main-banner .main-banner-parent .caption h1 {
+	margin: 40px 0;
+}
+
+.main-banner .main-banner-parent .caption p {
+	margin-bottom: 40px;
+}
+
+.main-banner .main-banner-parent .caption .small-title {
+	font-size: 12px;
+	line-height: 16px;
+	margin-top: 20px;
+}
+
+
+
+.main-banner .main-banner-parent .caption .btn-1 {
+	color: var(--white);
+	padding: 12px 32px;
+	margin-right: 20px;
+	font-size: 18px;
+	background-color: var(--indigo);
+	transition: .2s linear .1s;
+}
+
+.main-banner .main-banner-parent .caption .btn-1:hover {
+	background-color: #564dcb;
+	border: 1px solid var(--indigo);
+}
+
+.main-banner .main-banner-parent .caption .btn-2 {
+	color: var(--indigo);
+	padding: 12px 32px;
+	font-size: 18px;
+	border: 1px solid var(--indigo);
+	background-color: var(--white);
+	transition: .2s linear .1s;
+}
+
+.main-banner .main-banner-parent .caption .btn-2:hover {
+	background-color: #e6e6e6;
+}
+
+/* Skills and Service CSS */
+.skills-section {
+	width: 100%;
+	margin-bottom: 200px;
+}
+
+.skills-section .design figure {
+	width: 40%;
+	margin-left: auto;
+}
+
+.skills-section .design {
+	display: flex;
+
+}
+
+.skills-section p {
+	font-size: 12px;
+	line-height: 16px;
+}
+
+
+.skills-section a {
+	color: var(--indigo);
+	text-decoration: none;
+	font-weight: 500;
+	font-size: 12px;
+}
+
+.skills-section h2 {
+	text-align: center;
+	padding: 0 62px;
+	margin-bottom: 150px;
+}
+
+.skills-section .design .web-design {
+	margin-left: 50px;
+	margin-right: 68px;
+}
+
+.skills-section .design.design-two {
+	display: flex;
+	float: right;
+	clear: right;
+	position: relative;
+}
+
+.skills-section .design.design-two .branding {
+	position: absolute;
+	width: 300px;
+	top: -402px;
+	right: 395px;
+	display: flex;
+	flex-direction: column;
+
+}
+
+.skills-section .design.design-two .modeling {
+	position: absolute;
+	width: 300px;
+	right: 20px;
+	margin-top: -402px;
+	display: flex;
+	flex-direction: column;
+}
+
+.skills-section .design.design-three {
+	display: flex;
+	float: right;
+	clear: right;
+	position: relative;
+}
+
+.skills-section .design.design-three .photography {
+	position: absolute;
+	width: 300px;
+	top: -184px;
+	right: 395px;
+	display: flex;
+	flex-direction: column;
+
+}
+
+
+.skills-section .design.design-three .video-creating {
+	position: absolute;
+	width: 300px;
+	top: -184px;
+	right: 20px;
+	display: flex;
+	flex-direction: column;
+}
+
+/* Sponsor CSS */
+
+.sponsors-section {
+	width: 100%;
+	margin-bottom: 200px;
+	background-color: #fcdede;
+}
+
+.container-fluid {
+	margin-bottom: 200px;
+	max-width: 1439px;
+	height: 300px;
+}
+
+.sponsors-section .sponsor-header {
+	display: flex;
+	justify-content: space-evenly;
+	margin: 148px 127px 100px 140px;
+}
+
+.title-sponsor {
+	display: flex;
+	position: relative;
+}
+
+.sponsors-section .title-sponsor h4 {
+	color: #9CA3AF;
+	font-size: 20px;
+	font-weight: 400;
+	position: absolute;
+	width: 104px;
+	bottom: -155px;
+	left: 185px;
+}
+
+/* Image Section CSS */
+
+.image-section {
+	width: 100%;
+	margin-bottom: 200px;
+}
+
+.gallery {
+	position: relative;
+}
+
+.image-section h2 {
+	text-align: center;
+	margin-bottom: 150px;
+}
+
+.image-section figure .img-1 {
+	margin-bottom: 436px;
+}
+
+.image-section figure .img-2 {
+	margin-left: 22px;
+}
+
+.image-section figure .img-3 {
+	margin-top: -435px;
+}
+
+.image-section figure .img-4 {
+	margin-left: -12px;
+}
+
+.image-section .gallery .project-title {
+	width: 495px;
+	height: 94px;
+	position: absolute;
+	right: 19px;
+	top: 778px;
+	background-color: #ffffff;
+	padding: 23px 27px 23px;
+
+}
+
+.image-section .gallery .project-title p {
+	font-size: 14px;
+	margin-top: -20px;
+}
+
+.image-section .gallery .project-title a {
+	margin-left: 413px;
+}
+
+.image-section .gallery .project-title a img {
+	margin-top: -125px;
+}
+
+/* Plan Section CSS */
+
+.plan-section {
+	width: 100%;
+	margin-bottom: 200px;
+}
+
+.plan-section .plan {
+	width: 100%;
+	display: flex;
+}
+
+.plan-section .plan figure {
+	width: 140px;
+	height: 140px;
+	margin: auto;
+	margin-bottom: 40px;
+	background-color: #dbd6f8;
+}
+
+.plan-section .plan figure img {
+	padding-top: 50px;
+}
+
+.plan-section .business-planning {
+	width: 361px;
+	flex-direction: column;
+	text-align: center;
+}
+
+.plan-section .financial-planning {
+	width: 361px;
+	flex-direction: column;
+	text-align: center;
+	margin-left: 83px;
+	margin-right: 83px;
+}
+
+.plan-section .market-planning {
+	width: 361px;
+	flex-direction: column;
+	text-align: center;
+}
+
+/* Careers Section CSS */
+
+.careers-section {
+	width: 100%;
+	margin-bottom: 200px;
+}
+
+.careers-section h2 {
+	text-align: center;
+	margin-bottom: 150px;
+}
+
+.careers-section .table-section {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.careers-section .table-section th {
+	font-size: 16px;
+	font-weight: 500;
+	color: var(--darklight);
+	padding-right: 450px;
+	padding-top: 80px;
+}
+
+.careers-section .table-section td {
+	font-size: 16px;
+	font-weight: 600;
+	padding-top: 80px;
+}
+
+.careers-section .table-section span {
+	font-size: 16px;
+	font-weight: 500;
+	color: var(--darklight);
+}
+
+/* Footer CSS */
+
+.footer-section {
+	width: 100%;
+	background-color: #fcdede;
+	padding-top: 110px;
+}
+
+.footer-section h2 {
+	text-align: center;
+}
+
+.footer-section p {
+	margin-top: 30px;
+	text-align: center;
+}
+
+.footer-section figure {
+	display: flex;
+	justify-content: center;
+	padding-top: 110px;
+}
+
+.footer-section figure a {
+	padding-right: 50px;
+}
